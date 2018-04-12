@@ -45,7 +45,7 @@ function getTemplate() {
   ];
 }
 
-export function init() {
+export default function init() {
   log.info('(menu) init');
   const menu = Menu.buildFromTemplate(getTemplate());
   Menu.setApplicationMenu(menu);

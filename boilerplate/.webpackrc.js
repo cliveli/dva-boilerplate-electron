@@ -4,6 +4,8 @@ export default {
   entry: 'src/renderer/src/index.js',
   outputPath: 'app/dist',
   extraBabelPlugins: [
+    'transform-decorators-legacy',
+    ['import', { libraryName: 'antd', libraryDirectory: 'es', style: true }],
   ],
   env: {
     development: {
@@ -11,7 +13,7 @@ export default {
     },
   },
   alias: {
-    components: path.resolve(__dirname, 'src/renderer/components/'),
+    components: path.resolve(__dirname, 'src/renderer/src/components/'),
   },
     html: {
     template: 'src/renderer/src/index.ejs',
